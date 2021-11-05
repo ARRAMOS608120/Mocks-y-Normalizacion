@@ -43,9 +43,14 @@ io.on('connection', async socket => {
     })
 });
 
+app.set('view engine', 'hbs')
+
+
+app.set('views', './public/plantillas')
+
 app.get('/api/productos-test',function(req, res) {
     const productos = listarProductos()
-    res.render('./plantillas/listaProductos',{productos});
+    res.render('./listaProductos',{productos});
 })
 
 http.listen(8080, () => console.log('Servidor corriendo en puerto 8080...'));

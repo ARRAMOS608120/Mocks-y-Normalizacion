@@ -7,7 +7,7 @@ const listarProductos = () => {
     let prod;
     for (let i = 0; i<5; i++) {
         prod = {
-         nombre: faker.commerce.product(),
+         title: faker.commerce.product(),
          price: faker.commerce.price(),
          thumbnail:  faker.image.image()
         }
